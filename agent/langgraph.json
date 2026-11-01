@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "invoice_workflow": "./app/graph/workflow.py:graph",
+    "rag": "./app/rag/rag_graph.py:graph",
+    "revalidate": "./app/graph/revalidate.py:graph",
+    "feedback": "./app/graph/feedback.py:graph",
+    "reindex": "./app/graph/reindex.py:graph"
+  },
+  "python_version": "3.11",
+  "dockerfile_lines": [
+    "RUN apt-get update && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-eng tesseract-ocr-spa tesseract-ocr-deu poppler-utils libpq5 && rm -rf /var/lib/apt/lists/*"
+  ],
+  "http": {
+    "app": "./app/webapp.py:app"
+  }
+}

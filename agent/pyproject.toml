@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    "langchain-aws",
+    "langgraph",
+    "langgraph-checkpoint-postgres",
+    "python-dotenv",
+    "redis",
+    "qdrant-client",
+    "litellm",
+    "httpx",
+    "sqlalchemy",
+    "psycopg[binary]",
+    "psycopg2-binary",
+    "pg8000",
+    "pdfplumber",
+    "pypdf",
+    "pdf2image",
+    "pytesseract",
+    "Pillow",
+    "python-docx",
+    "pyyaml",
+    "langsmith",
+    "rank_bm25",
+    "ragas",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
